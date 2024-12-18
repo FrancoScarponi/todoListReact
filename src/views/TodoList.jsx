@@ -63,7 +63,7 @@ export const TodoList = () => {
 
   return (
     <div className='flex flex-col h-screen justify-center items-center' >
-      <h1 className='font-bold pb-5'>La FUCKING ToDo</h1>
+      <h1 className='font-bold text-4xl pb-5'>Lista de tareas</h1>
       <div className='flex flex-col h-3/4 w-1/3 bg-zinc-700 justify-start aling-center gap-2 p-2 rounded-lg min-w-96'>
         <form onSubmit={(e)=>handleAddTask(e)} className='flex gap-2 justify-center'>
           <input type="text" value={task} onChange={(e)=>setTask(e.target.value)} 
@@ -71,7 +71,7 @@ export const TodoList = () => {
           <button type='submit' className='bg-zinc-900'>Agregar</button>
         </form>
       
-        <div className='bg-zinc-900 rounded-lg h-full p-2 gap-2'>
+        <div className='bg-zinc-900 rounded-lg h-full p-2 gap-2 overflow-y-auto'>
           <ul className='flex flex-col gap-2 '>
             {tareas.map((tarea)=>(
               

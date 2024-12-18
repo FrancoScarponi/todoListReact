@@ -7,8 +7,10 @@ import {login} from '../redux/userSlice'
 export const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
+
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("")
+
   const [error,setError] = useState("")
 
   const handleLogin = async (e)=>{
@@ -18,6 +20,7 @@ export const Login = () => {
       const userCredentials = await signInWithEmailAndPassword(auth, email, password);
       dispatch(login(userCredentials.user.toJSON()));
       navigate('/home');
+      
     }catch(error){
 
       switch (error.code) {

@@ -35,7 +35,7 @@ export const TodoItem = ({id,texto,completada}) => {
       <p className=' text-xl align-middle'>{texto}</p> 
       <div className='flex gap-2'>
 
-        <button className='text-sm'onClick={handleCompleted} >{completada?"Completa":"Incompleta"}</button>  
+        <button className='text-sm 'onClick={handleCompleted} >{completada?"Completa":"Incompleta"}</button>  
         <button className='text-sm text-red-800' onClick={handleDelete}>Eliminar</button>
 
       </div>   
